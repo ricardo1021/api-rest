@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.apirest</groupId>
 	<artifactId>exercise</artifactId>
-	<version>3.0.0</version>
+	<version>1.4.0</version>
 	<name>Api Rest</name>
 	<description>Example api rest.</description>
 	<url/>
