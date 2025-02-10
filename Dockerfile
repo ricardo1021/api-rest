@@ -5,7 +5,7 @@ FROM eclipse-temurin:21-jdk-jammy
 WORKDIR /app
 
 
-COPY /target/exercise-1.4.0.jar exercise.jar
+COPY /target/exercise-1.5.0.jar exercise.jar
 
 # Exponemos el puerto
 EXPOSE 5000

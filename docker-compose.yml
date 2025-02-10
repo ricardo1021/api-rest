@@ -3,12 +3,12 @@ version: '3.8'
 services:
   mysql:
     image: mysql:latest
-    container_name: pfcti-db
+    container_name: exercise-db
     environment:
-      MYSQL_ROOT_PASSWORD: pfctipassword
-      MYSQL_DATABASE: pfcti
-      MYSQL_USER: pfcti_user
-      MYSQL_PASSWORD: pfctiuserpassword
+      MYSQL_ROOT_PASSWORD: apipassword
+      MYSQL_DATABASE: apiDB
+      MYSQL_USER: api_user
+      MYSQL_PASSWORD: apiuserpassword
     ports:
       - "3306:3306"
     networks:
@@ -22,9 +22,9 @@ services:
       dockerfile: Dockerfile
     container_name: technical
     environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://pfcti-db:3306/pfcti
-      SPRING_DATASOURCE_USERNAME: pfcti_user
-      SPRING_DATASOURCE_PASSWORD: pfctiuserpassword	
+      SPRING_DATASOURCE_URL: jdbc:mysql://exercise-db:3306/apiDB
+      SPRING_DATASOURCE_USERNAME: api_user
+      SPRING_DATASOURCE_PASSWORD: apiuserpassword
     ports:
       - "5000:5000"
     depends_on:

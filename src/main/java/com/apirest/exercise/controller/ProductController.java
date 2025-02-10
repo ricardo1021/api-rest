@@ -38,11 +38,11 @@ public class ProductController {
     })
     @GetMapping("/filter/price/{initialRange}/{finalRange}")
     public ResponseEntity<List<ProductDTO>> filterByPrice(@PathVariable int initialRange, @Valid @PathVariable int finalRange) {
-        var filteredProducts = productService.getProductsByPriceRange(initialRange, finalRange);
         if (initialRange < ZERO_VALUE || finalRange < ZERO_VALUE || initialRange > finalRange) {
             log.error("Price range is invalid.");
             throw new BadRequestException("Price range is invalid.");
         }
+        var filteredProducts = productService.getProductsByPriceRange(initialRange, finalRange);
         if (CollectionUtils.isEmpty(filteredProducts)) {
             log.info("Filtered list is empty.");
             return ResponseEntity.noContent().build();
