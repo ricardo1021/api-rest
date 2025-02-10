@@ -1,0 +1,15 @@
+databaseChangeLog:
+  - changeSet:
+      id: ID-20250209_insert_product_data
+      author: edison.gavilanez
+      changes:
+        - loadData:
+            commentLineStartsWith: "#"
+            encoding: UTF-8
+            file: db/changelog/initial-data/20250209_insert_product_data.csv
+            quotchar: "\""
+            separator: ","
+            tableName: product
+      rollback:
+        - sql:
+            sql: delete from product

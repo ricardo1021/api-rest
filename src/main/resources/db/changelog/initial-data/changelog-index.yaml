@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - comment: Create table
+  - include:
+      file: 20250209_create_product_table.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: 20250209_insert_product_data.yaml
+      relativeToChangelogFile: true

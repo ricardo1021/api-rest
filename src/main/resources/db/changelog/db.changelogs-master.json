@@ -1,0 +1,13 @@
+{
+  "databaseChangeLog": [
+    {
+      "comment": "Create data"
+    },
+    {
+      "include": {
+        "file": "/initial-data/changelog-index.yaml",
+        "relativeToChangelogFile": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+barcode,item,category,price,discount,available
+0001,pilsen,beer,10,1,1
+0002,heinek,beer,35,1,1
+0003,club,beer,40,1,1
