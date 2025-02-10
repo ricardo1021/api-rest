@@ -18,9 +18,12 @@ logging:
   level:
     liquibase: DEBUG
 
-spring-doc:
+springdoc:
+  api-docs:
+    enabled: true
   swagger-ui:
-    path: /swagger
+    path: /swagger-ui.html
+
 
 server:
   port: 5000
