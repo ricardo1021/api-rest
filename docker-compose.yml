@@ -6,7 +6,7 @@ services:
     container_name: exercise-db
     environment:
       MYSQL_ROOT_PASSWORD: apipassword
-      MYSQL_DATABASE: apiDB
+      MYSQL_DATABASE: apidb
       MYSQL_USER: api_user
       MYSQL_PASSWORD: apiuserpassword
     ports:
@@ -20,9 +20,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: technical
+    container_name: technical-test
     environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://exercise-db:3306/apiDB
+      SPRING_DATASOURCE_URL: jdbc:mysql://exercise-db:3306/apidb
       SPRING_DATASOURCE_USERNAME: api_user
       SPRING_DATASOURCE_PASSWORD: apiuserpassword
     ports:
