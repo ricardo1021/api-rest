@@ -51,7 +51,20 @@ A global exception handler is implemented to handle any invalid input, such as i
 
 ### Instructions to Run the Project
 
-1. **Clone the repository**:
+1. **Clone the repository and change to the project path**:
    ```bash
    git clone https://github.com/ricardo1021/api-rest.git
+   cd api-rest
+   ```
+2. **Build the project**:
+   ```bash
+   mvn clean install
+   ```
+3. **Run the following command**:
+   ```bash
+   docker-compose up --build -d
+   ```
+4. **Swagger documentation**:
+   ```bash
+   http://localhost:5000/swagger-ui/index.html
    ```
